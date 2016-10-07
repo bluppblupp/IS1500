@@ -7,7 +7,7 @@ char* text1 = "This is a string.";
 char* text2 = "Yet another thing.";
 int count = 0;
 int list1[20];
-int list2[20]
+int list2[20];
 
 
 void copycodes(char *text, int *lst, int *count);
