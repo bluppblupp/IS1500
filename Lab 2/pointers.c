@@ -1,11 +1,16 @@
-
+# By Niklas Kamateros
 
 
 #include <stdio.h>
 
 char* text1 = "This is a string.";
 char* text2 = "Yet another thing.";
+int count = 0;
+int list1[20];
+int list2[20]
 
+
+void copycodes(char *text, int *lst, int *count);
 
 
 void printlist(const int* lst){
@@ -18,19 +23,19 @@ void printlist(const int* lst){
 }
 
 void endian_proof(const char* c){
-  printf("\nEndian experiment: 0x%02x,0x%02x,0x%02x,0x%02x\n", 
+  printf("\nEndian experiment: 0x%02x,0x%02x,0x%02x,0x%02x\n",
          (int)*c,(int)*(c+1), (int)*(c+2), (int)*(c+3));
-  
+
 }
 
 int main(void){
-  work();
+    work();
 
-  printf("\nlist1: ");
-  printlist(list1);
-  printf("\nlist2: ");
-  printlist(list2);
-  printf("\nCount = %d\n", count);
+    printf("\nlist1: ");
+    printlist(list1);
+    printf("\nlist2: ");
+    printlist(list2);
+    printf("\nCount = %d\n", count);
 
-  endian_proof((char*) &count);
+    endian_proof((char*) &count);
 }
