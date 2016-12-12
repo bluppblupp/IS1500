@@ -48,16 +48,16 @@ work:
 # function copycodes()
 copycodes:
 loop:
-	lb	$t0,0($a0)        #sign-extend value in $a0 with 0, and store in $t0.
-	beq	$t0,$0,done       #compare $s0 and $t0, if equal branch to done.
+	lb	$t0,0($a0)        #sign-extend value in $a0(text1) with 0, and store in $t0.
+	beq	$t0,$0,done       #compare $0 and $t0, if equal branch to done.
 	sw	$t0,0($a1)        #store word in register $t0 into $a1
 
 	addi	$a0,$a0,1       # $a0 = $a0 + 1
 	addi	$a1,$a1,4       # $a1 = $a1 + 4
 
-	lw	$t1,0($a2)        #
-	addi	$t1,$t1,1
-	sw	$t1,0($a2)
+	lw	$t1,0($a2)        # load the value which $a2 points to into $t1
+	addi	$t1,$t1,1       # increase the value by one
+	sw	$t1,0($a2)        # save the new value of count to the same address
 	j	loop
 done:
 	jr	$ra               #jump to address of $ra

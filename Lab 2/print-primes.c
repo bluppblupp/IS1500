@@ -24,19 +24,7 @@ void print_numbers (int n) {
   printAmount++;
 }
 
-void print_primes(int n){
-  // Should print out all prime numbers less than 'n'
-  // with the following formatting. Note that
-  // the number of columns is stated in the define
-  // COLUMNS
-for (i = 2; i++; i <= n){
-  if (is_prime (n)){
-      print_numbers(n);
 
-  }
-}
-
-}
 
 int is_prime(int n){
     if(n <= 1){
@@ -57,6 +45,20 @@ int is_prime(int n){
         i += 2;
     }
     return 1;
+}
+
+void print_primes(int n){
+  // Should print out all prime numbers less than 'n'
+  // with the following formatting. Note that
+  // the number of columns is stated in the define
+  // COLUMNS
+for (int i = 2; i++; i <= n){
+  if (is_prime (n)){
+      print_numbers(n);
+
+  }
+}
+
 }
 // 'argc' contains the number of program arguments, and
 // 'argv' is an array of char pointers, where each
